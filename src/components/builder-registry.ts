@@ -1,5 +1,6 @@
 import type { RegisteredComponent } from "@builder.io/sdk-qwik";
 import Counter from "./counter/counter";
+import CustomComponent from "./custom-component/customComponent";
 
 /**
  * This array is used to integrate custom components within Builder.
@@ -19,6 +20,17 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
       {
         name: "initialValue",
         type: "number",
+      },
+    ],
+  },
+  {
+    component: CustomComponent,
+    name: "CustomComponent",
+    inputs: [
+      {
+        name: "text",
+        type: "string",
+        defaultValue: "Hello world",
       },
     ],
   },
